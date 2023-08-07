@@ -7,10 +7,12 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./locomotive.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Zoc | Level 1</title>
   </head>
   <body>
+    <div id="minicircle"></div>
     <div id="main">
       <div id="hero">
         <div id="nav">
@@ -18,16 +20,26 @@
           <h4>Menu++</h4>
         </div>
         <div id="heading">
-          <h1>Software</h1>
+          <div class="bounding">
+            <h1 class="boundingElement">Software</h1>
+          </div>
           <div class="bocktext">
-            <h1 id="secondh1">Developer</h1>
-            <h5>Based on Nepal.</h5>
+            <div class="bounding">
+              <h1 class="boundingElement" id="secondh1">Developer</h1>
+            </div>
+            <div class="bounding">
+              <h5 class="boundingElement">Based on Nepal</h5>
+            </div>
           </div>
         </div>
 
         <div class="smallHeadings">
-          <h5>Available For Freelance</h5>
-          <h5>Work from Today</h5>
+          <div class="bounding">
+            <h5 class="boundingElement">Available For Freelance</h5>
+          </div>
+          <div class="bounding">
+            <h5 class="boundingElement">Work from Today</h5>
+          </div>
         </div>
 
         <div id="heroFooter">
@@ -58,11 +70,47 @@
       </div>
 
       <div id="about">
-        <div id="imageAbout"></div>
-        <div id="textAbout"></div>
+        <img src="./NJ 1.png" alt="" />
+        <div id="textAbout">
+          <h5>About Me</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
+            tenetur eveniet aperiam voluptatem ex quibusdam, libero quas
+            deleniti doloremque reprehenderit. Harum voluptates distinctio vitae
+            ea voluptatem delectus? Nam esse suscipit, dicta harum optio nemo
+            dolorem animi. Asperiores quaerat saepe culpa maiores, autem
+            corporis unde voluptatum dolores illo, porro natus id.
+          </p>
+          <a href="#">Let's Talk</a>
+        </div>
+      </div>
+
+      <div id="subscribe">
+        <h5>forgot to mention</h5>
+        <h3>Subscribe <i class="ri-arrow-right-up-line"></i></h3>
+      </div>
+
+      <div id="footer">
+        <div id="footerLeft">
+          <h5>2023 &copy;</h5>
+          <h5>9:13 PM</h5>
+        </div>
+        <div id="footerRight">
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">linkedin</a>
+          <a href="#">github</a>
+        </div>
       </div>
     </div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -1,20 +1,41 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "General Sans Medium";
+  font-family: "General Sans";
   box-sizing: border-box;
 }
 
+html,
 body {
   width: 100%;
   height: 100%;
 }
 
+#minicircle {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999;
+  border-radius: 50%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.bounding {
+  width: fit-content;
+  overflow: hidden;
+}
+.bounding .boundingElement {
+  transform: translateY(100%);
+}
+
 #main {
   width: 100%;
+  background-color: black;
 }
 
 #hero {
+  position: relative;
   color: #fff;
   width: 100%;
   height: 100vh;
@@ -37,11 +58,11 @@ body {
 }
 
 #heading {
-  margin-top: 40px;
+  margin-top: 90px;
 }
 
 #heading h1 {
-  margin-left: 90px;
+  margin-left: 30px;
   line-height: 1;
   opacity: 0.6;
   font-size: 10vw;
@@ -54,6 +75,9 @@ body {
 }
 
 .bocktext {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   width: fit-content;
 }
 
@@ -66,6 +90,9 @@ body {
 .smallHeadings {
   margin-top: 100px;
   padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .smallHeadings h5 {
@@ -146,9 +173,85 @@ body {
 
 #about {
   width: 100%;
+  background-color: black;
+  padding: 10vw 10vw;
+  color: white;
+  padding-left: 40vw;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 50px;
 }
 
-#imageAbout {
-  width: 2vw;
-  height: 2vw;
+#textAbout {
+  width: 25rem;
+}
+
+#textAbout h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+#about img {
+  width: 200px;
+}
+
+#textAbout p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+#textAbout a {
+  padding: 12px 22px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#subscribe {
+  background-color: black;
+  color: #fff;
+  padding: 20px 30px;
+  padding-bottom: 7vw;
+}
+
+#subscribe h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+#subscribe h3 {
+  text-transform: uppercase;
+  font-family: 14px;
+  margin-top: 10px;
+}
+
+#footer {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 30px;
+}
+#footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+#footerLeft {
+  display: flex;
+  gap: 15;
+}
+
+#footerRight {
+  display: flex;
+  gap: 30pxx;
 }
