@@ -167,8 +167,7 @@ body {
   position: absolute;
   z-index: 999;
   height: 140%;
-  /* opacity: 0; */
-  display: none;
+  opacity: 0;
 }
 
 #about {

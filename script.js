@@ -1,4 +1,4 @@
-"use script";
+"use strict";
 
 // Locomotive for smooth scrolling
 const scroll = new LocomotiveScroll({
@@ -72,3 +72,31 @@ function circleOval() {
 circleOval();
 circleMouseFollower();
 firstPageAnimation();
+
+// select 3 element, apply mousemove, location of mouse x and y position, show image and move the image in mouse location, rotate image
+
+document.querySelectorAll(".element").forEach(function (element) {
+  let roatate = 0;
+  let difference = 0;
+
+  element.addEventListener("mouseleave", function (details) {
+    gsap.to(element.querySelector("img"), {
+      opacity: 0,
+      ease: Power3,
+    });
+  });
+
+  element.addEventListener("mousemove", function (details) {
+    let diff = details.clientY - element.getBoundingClientRect().top;
+    difference = details.clientX - roatate;
+    roatate = details.clientX;
+
+    gsap.to(element.querySelector("img"), {
+      opacity: 1,
+      ease: Power3,
+      top: diff,
+      left: details.clientX,
+      rotate: gsap.utils.clamp(-20, 20, difference),
+    });
+  });
+});
